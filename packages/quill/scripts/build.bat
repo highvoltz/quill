@@ -12,7 +12,7 @@ mkdir %DIST%
 move %TMPDIR%\src\* %DIST%
 rmdir /s /q %TMPDIR%
 call npx babel src --out-dir %DIST% --copy-files --no-copy-ignored --extensions .ts --source-maps
-call npx webpack -- --mode %1
+call npx webpack -- --mode production
 del /q %DIST%\dist\*.css.js %DIST%\dist\*.css.js.*
 copy package.json %DIST%
 copy README.md %DIST%
